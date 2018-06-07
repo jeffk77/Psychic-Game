@@ -5,13 +5,14 @@ var losses = 0;
 var guesses = 10;
 var remainingGuesses = 10;
 var guessedLetters = [];
-var letterToGuess = null;
 
 // Randomly chooses a choice from the letters array. This is the Computer's choice.
 var compChoice = letters[Math.floor(Math.random() * letters.length)];
 
+console.log(compChoice);
+
 var updateGuessesLeft = function () {
-    document.querySelector('#guessLeft').innerHTML = "Guesses Left: " + remainingGuesses;
+    document.querySelector('#guessLeft').innerHTML = remainingGuesses;
 }
 
 var updateLetterToGuess = function () {
@@ -26,31 +27,28 @@ var reset = function () {
     guesses = 10;
     remainingGuesses = 10;
     guessedLetters = [];
-
-    updateLettertoGuess();
-    updateGuessesLeft();
-    updateGuessesSoFar();
 }
 
-updateLetterToGuess();
-updateGuessesLeft();
-
 document.onkeyup = function (event) {
-    guessesLeft--;
+    remainingGuesses--;
     var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
+
+    console.log(userGuess);
 
     guessedLetters.push(userGuess)
     updateGuessesLeft();
     updateGuessesSoFar();
 
-    if (guessesLeft > 0) {
-        if (userGuess == letterToGuess) {
+    if (remainingGuesses > 0) {
+        if (userGuess == compChoice) {
             wins++;
+            alert("Congrats! You're psychic!!");
             document.querySelector("#wins").innerHTML = "Wins: " + wins;
             reset();
         }
-    } else if (guessesLeft == 0) {
+    } else if (remainingGuesses == 0) {
         losses++;
+        alert("I'm sorry... turns out you're not psychic!");
         document.querySelector('#losses').innerHTML = "Losses: " + losses;
         reset();
     };
