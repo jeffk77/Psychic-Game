@@ -1,10 +1,9 @@
 
-/* font-family: 'Allerta Stencil', sans-serif;
-font-family: 'Raleway', sans-serif;
-font-family: 'Raleway Dots', cursive; */
+/* font-family: 'Comfortaa', cursive;
+font-family: 'Orbitron', sans-serif; */
 
 h1 h2 h3 h4 h5 h6 p {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Comfortaa', cursive;
 }
 h1 {
     font-size: 2em;
@@ -68,8 +67,8 @@ header {
     margin-left: auto;
     margin-right: auto;
     border-radius: 20px;
-    font-family: 'Raleway Dots', cursive;
-    font-size: 2.5em;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3.5em;
     height: 110px;
 }
 #computerDiv {
@@ -100,7 +99,8 @@ header {
     padding: 30px;
     background-color: black;
     color: rgb(41, 202, 41);
-    font-family: 'Allerta Stencil', sans-serif;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5em;
     box-shadow: 0px 0px 5px 5px black;
     margin-top: 50px;
     margin-left: auto;
@@ -116,7 +116,7 @@ header {
     padding: 30px;
     margin-left: auto;
     margin-right: auto;
-    border: 3px solid black;
+    border: 5px double black;
     border-radius: 20px;
 }
 #guessLeft {
