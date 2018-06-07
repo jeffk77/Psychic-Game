@@ -16,7 +16,7 @@ var updateGuessesLeft = function () {
 }
 
 var updateLetterToGuess = function () {
-    this.letterToGuess = this.letters[Math.floor(Math.random() * this.letters.length)];
+    this.compChoice = this.letters[Math.floor(Math.random() * this.letters.length)];
 };
 
 var updateGuessesSoFar = function () {
