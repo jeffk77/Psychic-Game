@@ -39,7 +39,7 @@ body {
     background-image: url("/assets/images/nebula.jpg");
 }
 #container {
-    width: 70%;
+    width: 960px;
     height: 100%;
     text-align: center;
     margin: 100px auto 100px auto;
@@ -73,8 +73,7 @@ header {
     height: 110px;
 }
 #computerDiv {
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
 }
 #screenDiv {
     margin-top: -375px;
@@ -82,6 +81,7 @@ header {
     margin-right: auto;
     height: 250px;
     padding: 20px;
+    border: 1px dashed red;
 }
 #computerChoiceBox {
     background-color: rgb(17, 17, 141);
@@ -120,7 +120,7 @@ header {
     border: 3px solid black;
     border-radius: 20px;
 }
-#userGuess {
+#guessLeft {
     background-color: rgb(94, 6, 42);
     color: white;
     padding: 5px;
@@ -134,3 +134,18 @@ header {
     margin-left: auto;
     margin-right: auto;
 }
+.letter {
+    width: 30px;
+    height: 30px;
+    border-style: solid;
+    padding: 2px;
+    float: left;
+    margin: 2px;
+  }
+
+  .letter-button-color {
+    color: darkcyan;
+  }
+  #buttons {
+    padding-top: 60px;
+  }

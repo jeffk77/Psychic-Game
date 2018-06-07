@@ -1,25 +1,56 @@
-var letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-
-var lettersGuessed = "";
+var letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
 var wins = 0;
 var losses = 0;
+var guesses = 10;
 var remainingGuesses = 10;
+var guessedLetters = [];
 
 // Randomly chooses a choice from the letters array. This is the Computer's choice.
 var compChoice = letters[Math.floor(Math.random() * letters.length)];
 
-// This function is run whenever the user presses a key.
+var updateGuessesLeft = function () {
+    document.querySelector('#guessLeft').innerHTML = "Guesses Left: " + remainingGuess;
+}
+
+var updateLetterToGuess = function () {
+    this.letterToGuess = this.letters[Math.floor(Math.random() * this.letters.length)];
+};
+
+var updateGuessesSoFar = function () {
+    document.querySelector('#let').innerHTML = "Letters You've Guessed: " + guessedLetters.join(', ');
+};
+
+var reset = function () {
+    guesses = 10;
+    remainingGuesses = 10;
+    guessedLetters = [];
+
+    updateLettertoGuess();
+    updateGuessesLeft();
+    updateGuessesSoFar();
+}
+
+updateLetterToGuess();
+updateGuessesLeft();
+
 document.onkeyup = function (event) {
+    guessesLeft--;
+    var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
 
-    // Determines which key was pressed.
-    var userChoice = event.key;
-    var userGuess = userChoice.toUpperCase (userChoice);
+    guessedLetters.push(userGuess)
+    updateGuessesLeft();
+    updateGuessesSoFar();
 
-    console.log(compChoice);
-    console.log(userGuess);
-    console.log(remainingGuesses);
-    console.log(wins);
-    console.log(losses);
-
+    if (guessesLeft > 0) {
+        if (userGuess == letterToGuess) {
+            wins++;
+            document.querySelector("#wins").innerHTML = "Wins: " + wins;
+            reset();
+        }
+    } else if (guessesLeft == 0) {
+        losses++;
+        document.querySelector('#losses').innerHTML = "Losses: " + losses;
+        reset();
+    }
 };
