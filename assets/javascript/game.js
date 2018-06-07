@@ -1,20 +1,25 @@
-var letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "_"];
+var letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
-for (var i = 0; i < letters.length; i++) {
-  var letterBtn = $("<button>");
-  letterBtn.addClass("letter-button letter letter-button-color")
-  letterBtn.attr("data-letter", letters[i]);
-  letterBtn.text(letters[i]);
-  $("#buttons").append(letterBtn);
-}
+var lettersGuessed = "";
 
-$("#buttons").on("click", ".letter-button", function () {
-  var fridgeMagnet = $("<div>");
-  fridgeMagnet.addClass("letter fridge-color");
-  fridgeMagnet.text($(this).attr("data-letter"));
-  $("#display").append(fridgeMagnet);
-});
+var wins = 0;
+var losses = 0;
+var remainingGuesses = 10;
 
-$("#clear").on("click", function () {
-  $("#display").empty();
-});
+// Randomly chooses a choice from the letters array. This is the Computer's choice.
+var compChoice = letters[Math.floor(Math.random() * letters.length)];
+
+// This function is run whenever the user presses a key.
+document.onkeyup = function (event) {
+
+    // Determines which key was pressed.
+    var userChoice = event.key;
+    var userGuess = userChoice.toUpperCase (userChoice);
+
+    console.log(compChoice);
+    console.log(userGuess);
+    console.log(remainingGuesses);
+    console.log(wins);
+    console.log(losses);
+
+};
