@@ -5,12 +5,13 @@ var losses = 0;
 var guesses = 10;
 var remainingGuesses = 10;
 var guessedLetters = [];
+var letterToGuess = null;
 
 // Randomly chooses a choice from the letters array. This is the Computer's choice.
 var compChoice = letters[Math.floor(Math.random() * letters.length)];
 
 var updateGuessesLeft = function () {
-    document.querySelector('#guessLeft').innerHTML = "Guesses Left: " + remainingGuess;
+    document.querySelector('#guessLeft').innerHTML = "Guesses Left: " + remainingGuesses;
 }
 
 var updateLetterToGuess = function () {
@@ -18,7 +19,7 @@ var updateLetterToGuess = function () {
 };
 
 var updateGuessesSoFar = function () {
-    document.querySelector('#let').innerHTML = "Letters You've Guessed: " + guessedLetters.join(', ');
+    document.querySelector('#lettersGuessed').innerHTML = "Letters You've Guessed: " + guessedLetters.join(', ');
 };
 
 var reset = function () {
@@ -52,5 +53,5 @@ document.onkeyup = function (event) {
         losses++;
         document.querySelector('#losses').innerHTML = "Losses: " + losses;
         reset();
-    }
+    };
 };
