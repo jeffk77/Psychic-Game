@@ -1,6 +1,7 @@
 
-/* font-family: 'Raleway Dots', cursive; */
-/* font-family: 'Raleway', sans-serif; */
+/* font-family: 'Allerta Stencil', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Raleway Dots', cursive; */
 
 h1 {
     font-size: 2em;
@@ -32,60 +33,59 @@ p {
     color: #777777;
 }
 
-.wrapper {
-    width: 960px;
+body {
+    background-image: url("/assets/images/nebula.jpg");
+}
+#container {
+    max-width: 80%;
+    min-width: 200px;
+    height: 100vh;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-    height: 100%;
     background-color: white;
+    box-shadow: 0px 0px 5px 5px rgb(87, 87, 87);
 }
 header {
     height: 150px;
-    margin-top: 25px;
-    margin-bottom: 100px;
-    border: 1px dashed red;
+    text-align: center;
 }
 #headerbar {
     height: 50px;
-    background-color: rgb(58, 58, 58);
-    border-top: 5px solid black;
-    border-bottom: 5px solid black;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    background-color: rgb(14, 22, 90);
+    margin: 50px 0 50px 0;
     text-align: center;
+    width: 100%;
 }
 #titlebox {
-    height: auto;
-    border: 10px solid green;
-    width: 17%;
+    height: 100px;
+    border: 10px solid rgb(4, 0, 58);
     color: black;
     background-color: white;
     padding: 20px;
-    margin-top: -50px;
+    margin-top: -30px;
     margin-left: auto;
     margin-right: auto;
     border-radius: 20px;
     font-family: 'Raleway', cursive;
-    font-size: 1.5em;
+    font-size: 1.75em;
+    width: 300px;
 }
-main {
-    border: 1px dashed green;
-    height: auto;
-    text-align: center;
+#computerscoreDiv {
+    margin: 0px;
+}
+#scoreBoard {
+    border-radius: 20px;
+    border: 10px white solid;
+    width: 90%;
+    height: 80%;
+    text-align: left;
+    padding: 30px;
+    background-color: black;
+    color: rgb(41, 202, 41);
+    font-family: 'Allerta Stencil', sans-serif;
+    box-shadow: 0px 0px 5px 5px black;
 }
 #computer {
-    width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-}
-#choiceBox {
-    font-family: 'Raleway', sans-serif;
-    border: 1px dashed orangered;
-    height: 250px;
-    width: 390px;
-    margin: -380px auto 50px auto;
-    padding: 30px;
+    width: 80%;
 }
