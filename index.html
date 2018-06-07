@@ -28,19 +28,46 @@
         </header>
 
         <div class="row" id="computerscoreDiv">
-            <div class="col-6" id="computerDiv">
+            <div class="col-6 align-items-center" id="computerDiv">
                 <img src="/assets/images/iMac.png" id="computer">
-            </div>
-            <div class="col-6 align-self-center" id="scoreBox">
-                <div id="scoreBoard">
-                    <h2>Wins: </h2>
-                    <h2>Losses: </h2>
-                    <h2>Remaining Guesses: </h2>
+                <div class="row">
+                    <div class="col-10" id="screenDiv">
+                        <h3>Guess What
+                            <br>Letter I'm Thinking Of...</h3>
+                        <div class="col-3" id="computerChoiceBox">
+                            ?
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
+        <div class="row" id="guessingBoard">
+            <div class="col-8" id="userguessDiv">
+                <h2>TYPE A LETTER TO GUESS...</h2>
+                <div class="row">
+                    <div class="col-1" id="userGuess">
+                        ?
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-8" id="lettersGuessed">
+                        <h3>Letters You've Guessed: </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" id="scoreBox">
+            <div class="col-6" id="scoreBoard">
+                <h3>Wins: </h3>
+                <h3>Losses: </h3>
+                <h3>Remaining Guesses: </h3>
+            </div>
+        </div>
+
     </div>
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
